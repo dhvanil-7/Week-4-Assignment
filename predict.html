@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Week-4 Assignment</title>
+        <link rel="stylesheet" type="text/css" href="static\predict.css">
+    </head>
+    <body>
+        <h1><u>IRIS Species Prediction Model</u></h1>
+        <br>
+        <h3>Please enter below required values: </h3>
+        <form action="{{ url_for('predict')}}" method="post">
+            Sepal length (cm): <input type="text" name="sepal_length" requied="required"/><br><br>
+            Sepal width (cm): <input type="text" name="sepal_width" requied="required" /><br><br>
+            Petal length (cm): <input type="text" name="petal_length" requied="required" /><br><br>
+            Petal width (cm): <input type="text" name="petal_width" requied="required" /><br><br>
+            <input type="submit" value="Submit" />
+        </form>
+        <br>
+        <h3>{{ prediction }}</h3>
+    </body>
+</html>
